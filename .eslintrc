@@ -1,0 +1,57 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "airbnb-base"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
+      }
+    }
+  },
+  "rules": {
+    "class-methods-use-this": "off",
+    "consistent-return": "off",
+    "default-case": "warn",
+    "max-len": ["error", 200],
+    "no-multiple-empty-lines": ["error", {"max": 1}],
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-trailing-spaces": "error",
+    "no-undef": "off",
+    "quotes": ["error", "double", { "avoidEscape": true }],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-unused-vars": "off",
+    "no-shadow": "off",
+    "no-underscore-dangle": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  }
+}
