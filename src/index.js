@@ -115,6 +115,6 @@ const server = new ApolloServer({
 //   },
 // });
 
-server.listen(4000).then(({ url }) => {
+server.listen().then(({ url }) => {
   console.log(`Servidor rodando, url: ${url}`);
 });
