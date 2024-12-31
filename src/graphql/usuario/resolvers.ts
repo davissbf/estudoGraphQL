@@ -1,12 +1,13 @@
-const usuario = () => ({
-  id: () => "1",
-  nome: () => "Davi",
-});
+const usuario = async (_, args, context) => {
+  const retornoUsuario = await context.axios.get(`http://localhost:3000/users/${args.id}`);
+
+  return retornoUsuario.data;
+};
 
 const usuarios = async (_, __, context) => {
-  const retornoUsurios = await context.axios.get("http://localhost:3000/users");
+  const retornoUsuarios = await context.axios.get("http://localhost:3000/users");
 
-  return retornoUsurios.data;
+  return retornoUsuarios.data;
 };
 
 export const usuarioResolvers = {
