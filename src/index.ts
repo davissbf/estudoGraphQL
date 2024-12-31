@@ -1,9 +1,14 @@
 import { ApolloServer } from "apollo-server";
+import axios from "axios";
 import { typeDefs, resolvers } from "./graphql/schema";
 
+// @ts-ignore
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: () => ({
+    axios,
+  }),
 });
 
 // const clientesArray = [
