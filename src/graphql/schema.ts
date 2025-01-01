@@ -1,8 +1,8 @@
 import { gql } from "apollo-server";
-import { usuarioTypeDefs } from "./usuario/typedefs";
-import { usuarioResolvers } from "./usuario/resolvers";
-import { postTypeDefs } from "./post/typedefs";
-import { postResolvers } from "./post/resolvers";
+import { usuarioTypeDefs } from "./routes/usuario/typedefs";
+import { usuarioResolvers } from "./routes/usuario/resolvers";
+import { postTypeDefs } from "./routes/post/typedefs";
+import { postResolvers } from "./routes/post/resolvers";
 
 const rootTypeDefs = gql`
     type Query {
