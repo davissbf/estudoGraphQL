@@ -8,7 +8,6 @@ const server = new ApolloServer({
   resolvers,
   context: () => ({
     axios,
-    teste: true,
   }),
 });
 
