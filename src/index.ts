@@ -8,6 +8,7 @@ const server = new ApolloServer({
   resolvers,
   context: () => ({
     axios,
+    teste: true,
   }),
 });
 
@@ -64,7 +65,7 @@ const server = new ApolloServer({
 //     type Produtos {
 //       id: ID,
 //       nome: String,
-//       Preco: String,
+//       preco: String,
 //     }
 //   `,
 //   resolvers: {
@@ -98,7 +99,7 @@ const server = new ApolloServer({
 //           },
 //         },
 //       ],
-//       cliente: (_, { id }) => clientesArray.find((cliente) => cliente.id === id),
+//       cliente: (parent, args, context, info) => clientesArray.find((cliente) => cliente.id === args.id),
 //       produtos: () => [
 //         {
 //           id: "1",

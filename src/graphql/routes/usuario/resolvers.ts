@@ -3,9 +3,9 @@ import { Usuario } from "../../model/interfaces/Usuario";
 
 const controller = new UsuarioController({});
 
-const usuario = async (_: any, args: any): Promise<Usuario> => controller.retornarUsuarioPeloId(args.id);
+const usuario = async (parent: any, args: any, context: any, info: any): Promise<Usuario> => controller.retornarUsuarioPeloId(args.id);
 
-const usuarios = async (): Promise<Array<Usuario>> => controller.retornarTodosUsuarios();
+const usuarios = async (parent: any, args: any, context: any, info: any): Promise<Array<Usuario>> => controller.retornarTodosUsuarios();
 
 export const usuarioResolvers = {
   Query: {
